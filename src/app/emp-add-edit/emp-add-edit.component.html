@@ -1,0 +1,111 @@
+<div mat-dialog-title>Employee Form</div>
+
+
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+<div mat-dialog-content class="content">
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>First name</mat-label>
+            <input matInput placeholder="Ex.Lilly" formControlName="firstName"  >
+        </mat-form-field>
+        <!-- firstname validations -->
+        <div *ngIf="empForm.controls['firstName'].hasError('required') && (empForm.controls['firstName'].dirty || empForm.controls['firstName'].touched)" class="requiredAlert">
+            <span style="color: red;font-size: xx-small;">*This field is required</span>
+        </div>
+        <div *ngIf="empForm.controls['firstName'].hasError('minlength')  && !empForm.controls['firstName'].hasError('pattern')" class="requiredAlert">
+            <span style="color: red;font-size: xx-small;">*Minimum 5 characters</span>
+        </div>
+        <div *ngIf="empForm.controls['firstName'].hasError('pattern') && empForm.controls['firstName'].value.length >= 5" class="requiredAlert">
+            <span style="color: red;font-size: xx-small;">*Invalid Username</span>
+        </div>
+        <mat-form-field appearance="outline">
+            <mat-label>Last name</mat-label>
+            <input matInput placeholder="Ex.wheeler" formControlName="lastName">
+        </mat-form-field>
+        <!-- lastname validations -->
+        <div *ngIf="empForm.controls['lastName'].hasError('required') && (empForm.controls['lastName'].dirty || empForm.controls['lastName'].touched)" class="requiredAlert1">
+            <span style="color: red;font-size: xx-small;">*This field is required</span>
+        </div>
+        <div *ngIf="empForm.controls['lastName'].hasError('minlength') && !empForm.controls['lastName'].hasError('pattern')" class="requiredAlert1">
+            <span style="color: red;font-size: xx-small;">*Minimum 5 characters</span>
+        </div>
+        <div *ngIf="empForm.controls['lastName'].hasError('pattern') && empForm.controls['lastName'].value.length >= 5" class="requiredAlert1">
+            <span style="color: red;font-size: xx-small;">*Invalid Username</span>
+        </div>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="test@gmail.com" formControlName="email">
+        </mat-form-field>
+        <!-- email validation -->
+        <div *ngIf="empForm.controls['email'].hasError('required') && (empForm.controls['email'].dirty || empForm.controls['email'].touched)" class="mailAlert">
+            <span style="color: red;font-size: xx-small;">*This field is required</span>
+         </div>
+         <div *ngIf="empForm.controls['email'].hasError('pattern')" class="mailAlert">
+            <span style="color: red;font-size: xx-small;">*Invalid email</span>
+         </div>
+        <mat-form-field appearance="outline">
+            <mat-label>Date of birth</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dob">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field> 
+           <!--dob validation  -->
+           <div *ngIf="empForm.controls['dob'].hasError('required') && (empForm.controls['dob'].dirty || empForm.controls['dob'].touched)" class="dobAlert">
+            <span style="color: red;font-size: xx-small;">*This field is required</span>
+           </div>
+           <div *ngIf = "dob?.errors?.['dobInvalid'] && dob?.touched" class="dobAlert">
+            <span style="color: red;font-size: xx-small;" >*Date of Birth is invalid</span>
+           </div>
+    </div>
+    <div class="row">
+        <mat-radio-group formControlName="gender">
+            <mat-label><b>Gender</b></mat-label>
+            <mat-radio-button value="male">Male</mat-radio-button>
+            <mat-radio-button value="female">Female</mat-radio-button>
+            <mat-radio-button value="others">Others</mat-radio-button>
+          </mat-radio-group>
+          <div *ngIf="empForm.controls['gender'].hasError('required') && empForm.controls['gender'].touched">
+            <span style="color: red;font-size: xx-small;">*This field is required</span>
+          </div>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Education</mat-label>
+            <mat-select formControlName="education">
+              <mat-option *ngFor="let val of education" [value]="val">
+                {{val}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div *ngIf="empForm.controls['education'].hasError('required')  && (empForm.controls['education'].dirty || empForm.controls['education'].touched)" class="educationAlert">
+            <span style="color: red;font-size: xx-small;">*This field is required</span>
+          </div>
+          <mat-form-field appearance="outline">
+            <mat-label>Company</mat-label>
+            <input matInput placeholder="Ex.Google" formControlName="company">
+          </mat-form-field>
+          <div *ngIf="empForm.controls['company'].hasError('required')  && (empForm.controls['company'].dirty || empForm.controls['company'].touched)" class="companyAlert">
+            <span style="color: red;font-size: xx-small;">*This field is required</span>
+          </div>          
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Experience</mat-label>
+            <input matInput type="number" placeholder="Ex.5" formControlName="experience">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Package</mat-label>
+            <input matInput type="number" placeholder="Ex.12" formControlName="package">
+            <mat-hint>In rupees</mat-hint>
+        </mat-form-field>
+    </div>
+
+</div>
+<div mat-dialog-actions class="action">
+    <button mat-raised-button  type="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">{{data?'Update':'Save'}}</button>
+</div>
+</form>

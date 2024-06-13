@@ -1,0 +1,225 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "srusti",
+      "lastName": "thasa",
+      "email": "sruti3@gmail.com",
+      "dob": "1993-02-02T18:30:00.000Z",
+      "gender": "female",
+      "education": "Post graduate",
+      "company": "mason",
+      "experience": 7,
+      "package": 90,
+      "id": 1
+    },
+    {
+      "firstName": "shiva",
+      "lastName": "sankar",
+      "email": "shiva@gmail.com",
+      "dob": "1999-08-18T18:30:00.000Z",
+      "gender": "male",
+      "education": "Intermediate",
+      "company": "Infosys",
+      "experience": 8,
+      "package": 79,
+      "id": 2
+    },
+    {
+      "firstName": "edward",
+      "lastName": "rikson",
+      "email": "edward@gmail.com",
+      "dob": "1996-12-14T18:30:00.000Z",
+      "gender": "male",
+      "education": "Graduate",
+      "company": "TCS",
+      "experience": 8,
+      "package": 90,
+      "id": 7
+    },
+    {
+      "firstName": "preethi",
+      "lastName": "shasha",
+      "email": "pree7@gmail.com",
+      "dob": "1995-12-08T18:30:00.000Z",
+      "gender": "female",
+      "education": "Graduate",
+      "company": "Wipro",
+      "experience": 6,
+      "package": 65,
+      "id": 11
+    },
+    {
+      "firstName": "revi",
+      "lastName": "shah",
+      "email": "revi3@gmail.com",
+      "dob": "2024-06-02T18:30:00.000Z",
+      "gender": "male",
+      "education": "Graduate",
+      "company": "Kissflow",
+      "experience": 10,
+      "package": 21122,
+      "id": 12
+    },
+    {
+      "firstName": "lilly",
+      "lastName": "milli",
+      "email": "lmlilly@gmail.com",
+      "dob": "1999-12-01T18:30:00.000Z",
+      "gender": "female",
+      "education": "Post graduate",
+      "company": "google",
+      "experience": 10,
+      "package": 100,
+      "id": 14
+    },
+    {
+      "firstName": "lilly",
+      "lastName": "wheelysen",
+      "email": "lilly6@gmail.com",
+      "dob": "1993-01-20T18:30:00.000Z",
+      "gender": "female",
+      "education": "Post graduate",
+      "company": "Faang",
+      "experience": 17,
+      "package": 1000,
+      "id": 15
+    },
+    {
+      "firstName": "roshan",
+      "lastName": "tahil",
+      "email": "roshan@gmail.com",
+      "dob": "1997-01-21T18:30:00.000Z",
+      "gender": "male",
+      "education": "Intermediate",
+      "company": "tesla",
+      "experience": 10,
+      "package": 100,
+      "id": 16
+    },
+    {
+      "firstName": "rithvik",
+      "lastName": "dassan",
+      "email": "rithvik@gmail.com",
+      "dob": "2017-02-06T18:30:00.000Z",
+      "gender": "male",
+      "education": "Diploma",
+      "company": "jio",
+      "experience": 8,
+      "package": 10,
+      "id": 17
+    },
+    {
+      "firstName": "emily",
+      "lastName": "carter",
+      "email": "emily@gmail.com",
+      "dob": "1996-03-05T18:30:00.000Z",
+      "gender": "female",
+      "education": "Matric",
+      "company": "Bizmetric",
+      "experience": 10,
+      "package": 1000,
+      "id": 18
+    },
+    {
+      "firstName": "therasa",
+      "lastName": "laali",
+      "email": "thersa@gmail.com",
+      "dob": "1997-01-28T18:30:00.000Z",
+      "gender": "female",
+      "education": "Diploma",
+      "company": "Uplers",
+      "experience": 10,
+      "package": 20,
+      "id": 19
+    },
+    {
+      "firstName": "roopa",
+      "lastName": "mallit",
+      "email": "roopa@gmail.com",
+      "dob": "1997-11-12T18:30:00.000Z",
+      "gender": "female",
+      "education": "Post graduate",
+      "company": "Razorpay",
+      "experience": 10,
+      "package": 90,
+      "id": 20
+    },
+    {
+      "firstName": "Alexi",
+      "lastName": "carool",
+      "email": "alexi@gmail.com",
+      "dob": "1998-08-13T18:30:00.000Z",
+      "gender": "male",
+      "education": "Post graduate",
+      "company": "maticz",
+      "experience": 10,
+      "package": 200,
+      "id": 21
+    },
+    {
+      "firstName": "riolax",
+      "lastName": "wazyy",
+      "email": "ril@gmail.com",
+      "dob": "1996-05-15T18:30:00.000Z",
+      "gender": "male",
+      "education": "Graduate",
+      "company": "Zucus",
+      "experience": 10,
+      "package": 200,
+      "id": 22
+    },
+    {
+      "firstName": "ajith",
+      "lastName": "vaaltar",
+      "email": "ajith@gmail.com",
+      "dob": "1994-10-10T18:30:00.000Z",
+      "gender": "male",
+      "education": "Post graduate",
+      "company": "carzi",
+      "experience": 10,
+      "package": 29,
+      "id": 23
+    },
+    {
+      "firstName": "aruna",
+      "lastName": "prabha",
+      "email": "arju@gmail.com",
+      "dob": "1992-11-28T18:30:00.000Z",
+      "gender": "male",
+      "education": "Diploma",
+      "company": "propel",
+      "experience": 7,
+      "package": 90,
+      "id": 24
+    },
+    {
+      "firstName": "atlas",
+      "lastName": "corrigan",
+      "email": "atlas5@gmail.com",
+      "dob": "1999-11-21T18:30:00.000Z",
+      "gender": "male",
+      "education": "Graduate",
+      "company": "Faang",
+      "experience": 7,
+      "package": 50,
+      "id": 25
+    }
+  ]
+}

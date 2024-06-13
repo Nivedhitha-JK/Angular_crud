@@ -1,0 +1,44 @@
+.content{
+    padding-top: 10px;
+}
+
+.row{
+    display: flex;
+    gap: 10px;
+    mat-form-field{
+        width: 100%;
+    }
+}
+.action{
+    padding: 0 25px 20px;
+    button{
+        flex: 1;
+    }
+}
+.requiredAlert{
+position: absolute;
+top: 25%;
+}
+.requiredAlert1{
+    position: absolute;
+    top: 25%;
+    right: 31%;
+    }
+.mailAlert{
+    position: absolute;
+    top: 42%;
+}
+.dobAlert{
+    position: absolute;
+    right: 14%;
+    top: 42%;
+}
+.educationAlert{
+    position: absolute;
+    top:67%;
+}
+.companyAlert{
+    position: absolute;
+    top: 67%;
+    right: 33%;
+}
